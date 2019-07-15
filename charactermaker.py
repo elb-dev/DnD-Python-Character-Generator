@@ -1,6 +1,43 @@
 import random
 
+def bellChoice():
+    #This whole thing is a fricken hack.
+    #It returns 0-13, on a bell curve. Chances are highest you'll get 6 or 7, being the center of the bell curve.
+    i = random.randrange(0,1000)
+    i += 1
+    if i == 1:
+        return 0
+    if i > 1 and i <= 6:
+        return 1
+    if i > 6 and i <= 23:
+        return 2
+    if i > 23 and i <= 67:
+        return 3
+    if i > 67 and i <= 159:
+        return 4
+    if i > 159 and i <= 309:
+        return 5
+    if i > 309 and i <= 500:
+        return 6
+    if i > 500 and i <= 691:
+        return 7
+    if i > 691 and i <= 841:
+        return 8
+    if i > 841 and i <= 933:
+        return 9
+    if i > 933 and i <= 977:
+        return 10
+    if i > 977 and i <= 994:
+        return 11
+    if i > 994 and i <= 999:
+        return 12
+    if i > 999:
+        return 13
+
 myRand = random.randrange(0,10)
+charAlphList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",]
+charFirstAlphChoice = random.randrange(0,len(charAlphList))
+charLastAlphChoice = random.randrange(0,len(charAlphList))
 charSexList = ["Male","Female"]
 charSexChoice = random.randrange(0,len(charSexList))
 charAlignList = ["Lawful Good",
@@ -17,10 +54,20 @@ charClassList = ["Blacksmith",
                  "Butcher",
                  "Baker"]
 charClassChoice = random.randrange(0,len(charClassList))
-charHeightList = ["5'5",
-                  "5'6",
-                  "20'7"]
-charHeightChoice = random.randrange(0,len(charHeightList))
+charHeightList = ["Insanely Short",
+                  "Very Short",
+                  "Short",
+                  "Somewhat Short",
+                  "Shorter Than Average",
+                  "Slightly Below Average",
+                  "Average-",
+                  "Average+",
+                  "Slightly Above Average",
+                  "Taller Than Average",
+                  "Somewhat Tall",
+                  "Very Tall",
+                  "Insanely Tall",]
+charHeightChoice = bellChoice()
 charBuildList = ["Fat",
                  "Chubby",
                  "Curved",
@@ -132,7 +179,7 @@ charFlawChoice = random.randrange(0,len(charFlawList))
 
 
 
-print("Name: ")
+print("Name: " + charAlphList[charFirstAlphChoice] + " " + charAlphList[charLastAlphChoice])
 print("Age: ")
 print("Race: ")
 print("Sex: " + charSexList[charSexChoice])
