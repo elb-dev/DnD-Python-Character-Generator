@@ -34,26 +34,25 @@ def bellChoice():
     if i > 999:
         return 13
 
-myRand = random.randrange(0,10)
+
 charAlphList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",]
 charFirstAlphChoice = random.randrange(0,len(charAlphList))
 charLastAlphChoice = random.randrange(0,len(charAlphList))
+
 charSexList = ["Male","Female"]
 charSexChoice = random.randrange(0,len(charSexList))
-charAlignList = ["Lawful Good",
-                 "Neutral Good",
-                 "Chaotic Good",
-                 "Lawful Neutral",
-                 "Neutral",
-                 "Chaotic Neutral",
-                 "Lawful Evil",
-                 "Neutral Evil",
-                 "Chaotic Evil"]
-charAlignChoice = random.randrange(0,len(charAlignList))
+
+charGoodOrEvilList = ["Good", "Neutral", "Evil"]
+charGoodOrEvilChoice = random.randrange(0,len(charGoodOrEvilList))
+
+charLawfulOrChaoticList = ["Lawful", "Neutral", "Chaotic"]
+charLawfulOrChaoticChoice = random.randrange(0,len(charLawfulOrChaoticList))
+
 charClassList = ["Blacksmith",
                  "Butcher",
                  "Baker"]
 charClassChoice = random.randrange(0,len(charClassList))
+
 charHeightList = ["Insanely Short",
                   "Very Short",
                   "Short",
@@ -68,6 +67,7 @@ charHeightList = ["Insanely Short",
                   "Very Tall",
                   "Insanely Tall",]
 charHeightChoice = bellChoice()
+
 charBuildList = ["Fat",
                  "Chubby",
                  "Curved",
@@ -77,6 +77,7 @@ charBuildList = ["Fat",
                  "Strong",
                  "Buff"]
 charBuildChoice = random.randrange(0,len(charBuildList))
+
 charAppearanceList = ["Distinctive Jewelry",
                       "Piercings",
                       "Flamboyant or outlandish clothing",
@@ -98,6 +99,7 @@ charAppearanceList = ["Distinctive Jewelry",
                       "Exceptionally beautiful",
                       "Exceptionally ugly"]
 charAppearanceChoice = random.randrange(0,len(charAppearanceList))
+
 charTalentList = ["Plays a musical instrument",
                   "Speaks several languages fluently",
                   "Unbelievably lucky",
@@ -119,6 +121,7 @@ charTalentList = ["Plays a musical instrument",
                   "Skilled dancer",
                   "Knows thieves' cant"]
 charTalentChoice = random.randrange(0,len(charTalentList))
+
 charMannerismList = ["Prone to singing, whistling, or humming quietly",
                      "Speaks in rhyme or some other peculiar way",
                      "Particularly low or high voice",
@@ -140,6 +143,7 @@ charMannerismList = ["Prone to singing, whistling, or humming quietly",
                      "Bites fingernails",
                      "Twirls hair or tugs beard"]
 charMannerismChoice = random.randrange(0,len(charMannerismList))
+
 charInteractionList = ["Argumentative",
                        "Arrogant",
                        "Blustering",
@@ -153,6 +157,9 @@ charInteractionList = ["Argumentative",
                        "Quiet",
                        "Suspicious"]
 charInteractionChoice = random.randrange(0,len(charInteractionList))
+
+#Ideal would go here
+
 charBondList = ["Dedicated to fulfilling a personal life goal",
                 "Protective of close family members",
                 "Protective of colleagues or compatriots",
@@ -163,6 +170,7 @@ charBondList = ["Dedicated to fulfilling a personal life goal",
                 "Protective of a valuable possession",
                 "Out for revenge"]
 charBondChoice = random.randrange(0,len(charBondList))
+
 charFlawList = ["Forbidden love or susceptibility to romance",
                 "Enjoys decadent pleasures",
                 "Arrogance",
@@ -183,7 +191,7 @@ print("Name: " + charAlphList[charFirstAlphChoice] + " " + charAlphList[charLast
 print("Age: ")
 print("Race: ")
 print("Sex: " + charSexList[charSexChoice])
-print("Alignment: " + charAlignList[charAlignChoice])
+print("Alignment: " + charLawfulOrChaoticList[charLawfulOrChaoticChoice] + " " + charGoodOrEvilList[charGoodOrEvilChoice])
 print("Class/Ocupation: " + charClassList[charClassChoice])
 print("Height: " + charHeightList[charHeightChoice])
 print("Build: " + charBuildList[charBuildChoice])
