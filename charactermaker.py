@@ -159,6 +159,64 @@ charInteractionList = ["Argumentative",
 charInteractionChoice = random.randrange(0,len(charInteractionList))
 
 #Ideal would go here
+charIdealGoodList = ["Good1",
+                     "Good2",
+                     "Good3",
+                     "Good4",
+                     "Good5",
+                     "Good6"]
+charIdealNeutralList = ["Neutral1",
+                        "Neutral2",
+                        "Neutral3",
+                        "Neutral4",
+                        "Neutral5",
+                        "Neutral6"]
+charIdealEvilList = ["Evil1",
+                     "Evil2",
+                     "Evil3",
+                     "Evil4",
+                     "Evil5",
+                     "Evil6"]
+charIdealLawfulList = ["Lawful1",
+                       "Lawful2",
+                       "Lawful3",
+                       "Lawful4",
+                       "Lawful5",
+                       "Lawful6"]
+charIdealChaoticList = ["Chaotic1",
+                        "Chaotic2",
+                        "Chaotic3",
+                        "Chaotic4",
+                        "Chaotic5",
+                        "Chaotic6"]
+charIdealAlternateList = ["Alternate1",
+                          "Alternate2",
+                          "Alternate3",
+                          "Alternate4",
+                          "Alternate5",
+                          "Alternate6"]
+charNormalOrAlternateChoice = random.randrange(1,11)
+if charNormalOrAlternateChoice == 10:
+    charIdealChoice = charIdealAlternateList[random.randrange(0,len(charIdealAlternateList))]
+else:
+    charIdealGoodOrEvil = [charIdealGoodList,
+                           charIdealNeutralList,
+                           charIdealEvilList]
+    charIdealLawfulOrChaotic = [charIdealLawfulList,
+                                charIdealNeutralList,
+                                charIdealChaoticList]
+    charIdealChoiceLength = len(charIdealGoodOrEvil[charGoodOrEvilChoice])
+    charIdealChoiceLength = charIdealChoiceLength + len(charIdealLawfulOrChaotic[charLawfulOrChaoticChoice])
+    #Here we're going to determine a choice out of these
+    charIdealChoiceNumber = random.randrange(0, charIdealChoiceLength)
+    if charIdealChoiceNumber >= len(charIdealGoodOrEvil[charGoodOrEvilChoice]):
+        charIdealChoiceNumber -= len(charIdealGoodOrEvil[charGoodOrEvilChoice])
+        charIdealChoice = charIdealLawfulOrChaotic[charLawfulOrChaoticChoice]
+        charIdealChoice = charIdealChoice[charIdealChoiceNumber]
+    else:
+        charIdealChoice = charIdealGoodOrEvil[charGoodOrEvilChoice]
+        charIdealChoice = charIdealChoice[charIdealChoiceNumber]
+    
 
 charBondList = ["Dedicated to fulfilling a personal life goal",
                 "Protective of close family members",
@@ -200,7 +258,7 @@ print("Stats: S+0 D+0 C+0 I+0 W+0 C+0")
 print("Talent: " + charTalentList[charTalentChoice])
 print("Mannerism: " + charMannerismList[charMannerismChoice])
 print("Interaction: " + charInteractionList[charInteractionChoice])
-print("Ideal: ")
+print("Ideal: " + charIdealChoice)
 print("Bond: " + charBondList[charBondChoice])
 print("Flaw/Secret: " + charFlawList[charFlawChoice])
 print("Description: ")
