@@ -34,25 +34,29 @@ def bellChoice():
     if i > 999:
         return 13
 
-
+#Name
 charAlphList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",]
 charFirstAlphChoice = random.randrange(0,len(charAlphList))
 charLastAlphChoice = random.randrange(0,len(charAlphList))
 
+#Sex
 charSexList = ["Male","Female"]
 charSexChoice = random.randrange(0,len(charSexList))
 
+#Alignment
 charGoodOrEvilList = ["Good", "Neutral", "Evil"]
 charGoodOrEvilChoice = random.randrange(0,len(charGoodOrEvilList))
 
 charLawfulOrChaoticList = ["Lawful", "Neutral", "Chaotic"]
 charLawfulOrChaoticChoice = random.randrange(0,len(charLawfulOrChaoticList))
 
+#Class
 charClassList = ["Blacksmith",
                  "Butcher",
                  "Baker"]
 charClassChoice = random.randrange(0,len(charClassList))
 
+#Height
 charHeightList = ["Insanely Short",
                   "Very Short",
                   "Short",
@@ -68,6 +72,7 @@ charHeightList = ["Insanely Short",
                   "Insanely Tall",]
 charHeightChoice = bellChoice()
 
+#Build
 charBuildList = ["Fat",
                  "Chubby",
                  "Curved",
@@ -78,6 +83,7 @@ charBuildList = ["Fat",
                  "Buff"]
 charBuildChoice = random.randrange(0,len(charBuildList))
 
+#Appearance
 charAppearanceList = ["Distinctive Jewelry",
                       "Piercings",
                       "Flamboyant or outlandish clothing",
@@ -100,6 +106,7 @@ charAppearanceList = ["Distinctive Jewelry",
                       "Exceptionally ugly"]
 charAppearanceChoice = random.randrange(0,len(charAppearanceList))
 
+#Talent
 charTalentList = ["Plays a musical instrument",
                   "Speaks several languages fluently",
                   "Unbelievably lucky",
@@ -122,6 +129,7 @@ charTalentList = ["Plays a musical instrument",
                   "Knows thieves' cant"]
 charTalentChoice = random.randrange(0,len(charTalentList))
 
+#Mannerism
 charMannerismList = ["Prone to singing, whistling, or humming quietly",
                      "Speaks in rhyme or some other peculiar way",
                      "Particularly low or high voice",
@@ -144,6 +152,7 @@ charMannerismList = ["Prone to singing, whistling, or humming quietly",
                      "Twirls hair or tugs beard"]
 charMannerismChoice = random.randrange(0,len(charMannerismList))
 
+#Interaction
 charInteractionList = ["Argumentative",
                        "Arrogant",
                        "Blustering",
@@ -158,7 +167,7 @@ charInteractionList = ["Argumentative",
                        "Suspicious"]
 charInteractionChoice = random.randrange(0,len(charInteractionList))
 
-#Ideal would go here
+#Ideal
 charIdealGoodList = ["Beauty",
                      "Charity",
                      "Greater GOod",
@@ -217,7 +226,7 @@ else:
         charIdealChoice = charIdealGoodOrEvil[charGoodOrEvilChoice]
         charIdealChoice = charIdealChoice[charIdealChoiceNumber]
     
-
+#Bond
 charBondList = ["Dedicated to fulfilling a personal life goal",
                 "Protective of close family members",
                 "Protective of colleagues or compatriots",
@@ -229,6 +238,7 @@ charBondList = ["Dedicated to fulfilling a personal life goal",
                 "Out for revenge"]
 charBondChoice = random.randrange(0,len(charBondList))
 
+#Flaw/Secret
 charFlawList = ["Forbidden love or susceptibility to romance",
                 "Enjoys decadent pleasures",
                 "Arrogance",
