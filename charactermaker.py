@@ -39,6 +39,9 @@ charAlphList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
 charFirstAlphChoice = random.randrange(0,len(charAlphList))
 charLastAlphChoice = random.randrange(0,len(charAlphList))
 
+#Age
+charAgeChoice = random.randrange(0,101)
+
 #Sex
 charSexList = ["Male","Female"]
 charSexChoice = random.randrange(0,len(charSexList))
@@ -256,7 +259,7 @@ charFlawChoice = random.randrange(0,len(charFlawList))
 
 
 print("Name: " + charAlphList[charFirstAlphChoice] + " " + charAlphList[charLastAlphChoice])
-print("Age: ")
+print("Age: " + str(charAgeChoice))
 print("Race: ")
 print("Sex: " + charSexList[charSexChoice])
 print("Alignment: " + charLawfulOrChaoticList[charLawfulOrChaoticChoice] + " " + charGoodOrEvilList[charGoodOrEvilChoice])
