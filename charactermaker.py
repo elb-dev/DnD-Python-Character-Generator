@@ -34,6 +34,40 @@ def bellChoice():
     if i > 999:
         return 13
 
+#This function will roll a number of dice, and can drop a number of dice, highest or lowest.
+def diceRoll(diceCount, sides):
+    diceList = diceLister(diceCount, sides)
+    diceAdded = diceAdder(diceList)
+    return diceAdded;
+
+def diceRollDrop(diceCount, sides, highOrLow, dropCount):
+    #false for dropping high, true for dropping low
+    diceList = diceLister(diceCount, sides)
+    diceRemover(diceList, highOrLow, dropCount)
+    diceAdded = diceAdder(diceList)
+    return diceAdded;
+
+def diceLister(diceCount, sides):
+    diceList = []
+    for n in range(diceCount):
+        diceList.append(random.randrange(1,sides+1))
+    return diceList
+
+def diceRemover(diceList, highOrLow, dropCount):
+    #false for dropping high, true for dropping low
+    diceList.sort(reverse = highOrLow)
+    for n in range(dropCount):
+        diceList.pop()
+
+def diceAdder(diceList):
+    value = 0
+    for number in diceList:
+        value += number
+    return value
+
+def statModCalc(stat):
+    return (stat//2)-5
+
 #Name
 charAlphList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",]
 charFirstAlphChoice = random.randrange(0,len(charAlphList))
@@ -52,6 +86,20 @@ charGoodOrEvilChoice = random.randrange(0,len(charGoodOrEvilList))
 
 charLawfulOrChaoticList = ["Lawful", "Neutral", "Chaotic"]
 charLawfulOrChaoticChoice = random.randrange(0,len(charLawfulOrChaoticList))
+
+#Stats
+charStatStrength = diceRoll(3,6)
+charStatDexterity = diceRoll(3,6)
+charStatConstitution = diceRoll(3,6)
+charStatIntelligence = diceRoll(3,6)
+charStatWisdom = diceRoll(3,6)
+charStatCharisma = diceRoll(3,6)
+charStatStrengthMod = statModCalc(charStatStrength)
+charStatDexterityMod = statModCalc(charStatDexterity)
+charStatConstitutionMod = statModCalc(charStatConstitution)
+charStatIntelligenceMod = statModCalc(charStatIntelligence)
+charStatWisdomMod = statModCalc(charStatWisdom)
+charStatCharismaMod = statModCalc(charStatCharisma)
 
 #Class
 charClassList = ["Blacksmith",
@@ -257,17 +305,16 @@ charFlawList = ["Forbidden love or susceptibility to romance",
 charFlawChoice = random.randrange(0,len(charFlawList))
 
 
-
 print("Name: " + charAlphList[charFirstAlphChoice] + " " + charAlphList[charLastAlphChoice])
 print("Age: " + str(charAgeChoice))
 print("Race: ")
 print("Sex: " + charSexList[charSexChoice])
 print("Alignment: " + charLawfulOrChaoticList[charLawfulOrChaoticChoice] + " " + charGoodOrEvilList[charGoodOrEvilChoice])
+print("Stats: S{:+d} D{:+d} C{:+d} I{:+d} W{:+d} C{:+d}".format(charStatStrengthMod, charStatDexterityMod, charStatConstitutionMod, charStatIntelligenceMod, charStatWisdomMod, charStatCharismaMod))
 print("Class/Ocupation: " + charClassList[charClassChoice])
 print("Height: " + charHeightList[charHeightChoice])
 print("Build: " + charBuildList[charBuildChoice])
 print("Appearance: " + charAppearanceList[charAppearanceChoice])
-print("Stats: S+0 D+0 C+0 I+0 W+0 C+0")
 print("Talent: " + charTalentList[charTalentChoice])
 print("Mannerism: " + charMannerismList[charMannerismChoice])
 print("Interaction: " + charInteractionList[charInteractionChoice])
