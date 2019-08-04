@@ -159,42 +159,42 @@ charInteractionList = ["Argumentative",
 charInteractionChoice = random.randrange(0,len(charInteractionList))
 
 #Ideal would go here
-charIdealGoodList = ["Good1",
-                     "Good2",
-                     "Good3",
-                     "Good4",
-                     "Good5",
-                     "Good6"]
-charIdealNeutralList = ["Neutral1",
-                        "Neutral2",
-                        "Neutral3",
-                        "Neutral4",
-                        "Neutral5",
-                        "Neutral6"]
-charIdealEvilList = ["Evil1",
-                     "Evil2",
-                     "Evil3",
-                     "Evil4",
-                     "Evil5",
-                     "Evil6"]
-charIdealLawfulList = ["Lawful1",
-                       "Lawful2",
-                       "Lawful3",
-                       "Lawful4",
-                       "Lawful5",
-                       "Lawful6"]
-charIdealChaoticList = ["Chaotic1",
-                        "Chaotic2",
-                        "Chaotic3",
-                        "Chaotic4",
-                        "Chaotic5",
-                        "Chaotic6"]
-charIdealAlternateList = ["Alternate1",
-                          "Alternate2",
-                          "Alternate3",
-                          "Alternate4",
-                          "Alternate5",
-                          "Alternate6"]
+charIdealGoodList = ["Beauty",
+                     "Charity",
+                     "Greater GOod",
+                     "Life",
+                     "Respect",
+                     "Self-Sacrifice"]
+charIdealNeutralList = ["Balance",
+                        "Knowledge",
+                        "Live and Let Live",
+                        "Moderation",
+                        "Neutrality",
+                        "Peope (Sociability?)"]
+charIdealEvilList = ["Domination",
+                     "Greed",
+                     "Might",
+                     "Pain",
+                     "Retribution",
+                     "Slaughter"]
+charIdealLawfulList = ["Community",
+                       "Fairness",
+                       "Honor",
+                       "Logic",
+                       "Responsibility",
+                       "Tradition"]
+charIdealChaoticList = ["Change",
+                        "Creativity",
+                        "Freedom",
+                        "Independence",
+                        "No Limits",
+                        "Freedom"]
+charIdealAlternateList = ["Aspiration",
+                          "Discovery",
+                          "Glory",
+                          "Nation",
+                          "Redemption",
+                          "Self-Knowledge"]
 charNormalOrAlternateChoice = random.randrange(1,11)
 if charNormalOrAlternateChoice == 10:
     charIdealChoice = charIdealAlternateList[random.randrange(0,len(charIdealAlternateList))]
