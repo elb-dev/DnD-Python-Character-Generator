@@ -68,6 +68,14 @@ def diceAdder(diceList):
 def statModCalc(stat):
     return (stat//2)-5
 
+def heightFormat(inches):
+    feet = inches//12
+    inches = inches%12
+    output = str(feet) + "'" + str(inches) + '"'
+    return output
+
+def main:
+
 #Name
 charAlphList = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",]
 charFirstAlphChoice = random.randrange(0,len(charAlphList))
@@ -108,20 +116,7 @@ charClassList = ["Blacksmith",
 charClassChoice = random.randrange(0,len(charClassList))
 
 #Height
-charHeightList = ["Insanely Short",
-                  "Very Short",
-                  "Short",
-                  "Somewhat Short",
-                  "Shorter Than Average",
-                  "Slightly Below Average",
-                  "Average-",
-                  "Average+",
-                  "Slightly Above Average",
-                  "Taller Than Average",
-                  "Somewhat Tall",
-                  "Very Tall",
-                  "Insanely Tall",]
-charHeightChoice = bellChoice()
+charHeightChoice = 56+diceRoll(2,10)
 
 #Build
 charBuildList = ["Fat",
@@ -304,7 +299,7 @@ charFlawList = ["Forbidden love or susceptibility to romance",
                 "Foolhardy bravery"]
 charFlawChoice = random.randrange(0,len(charFlawList))
 
-
+'''
 print("Name: " + charAlphList[charFirstAlphChoice] + " " + charAlphList[charLastAlphChoice])
 print("Age: " + str(charAgeChoice))
 print("Race: ")
@@ -312,7 +307,7 @@ print("Sex: " + charSexList[charSexChoice])
 print("Alignment: " + charLawfulOrChaoticList[charLawfulOrChaoticChoice] + " " + charGoodOrEvilList[charGoodOrEvilChoice])
 print("Stats: S{:+d} D{:+d} C{:+d} I{:+d} W{:+d} C{:+d}".format(charStatStrengthMod, charStatDexterityMod, charStatConstitutionMod, charStatIntelligenceMod, charStatWisdomMod, charStatCharismaMod))
 print("Class/Ocupation: " + charClassList[charClassChoice])
-print("Height: " + charHeightList[charHeightChoice])
+print("Height: " + heightFormat(charHeightChoice))
 print("Build: " + charBuildList[charBuildChoice])
 print("Appearance: " + charAppearanceList[charAppearanceChoice])
 print("Talent: " + charTalentList[charTalentChoice])
@@ -323,3 +318,4 @@ print("Ideal: " + charIdealChoice)
 print("Bond: " + charBondList[charBondChoice])
 print("Flaw/Secret: " + charFlawList[charFlawChoice])
 print("Description: ")
+'''
